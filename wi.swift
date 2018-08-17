@@ -7,5 +7,7 @@ func main() throws {
 
     let networks = try iface!.scanForNetworks(withSSID: nil)
 
-    print(networks.first().ssid)
+    for network in networks {
+        print(network.ssid ?? "")
+    }
 }
